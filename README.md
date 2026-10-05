@@ -42,6 +42,8 @@ Gold Layer
 Business Analysis
     ↓
 Business Insights
+    ↓
+Power BI Dashboard
 ```
 
 ### 🥉 Bronze Layer
@@ -78,6 +80,9 @@ The analysis uses fields such as:
 
 The Business Analysis layer uses SQL to answer business-oriented questions using the Gold-layer data.
 
+## 📊 Power BI Dashboard
+An interactive **2-page Power BI dashboard** was developed to analyze hotel booking performance, revenue, customer behavior, and cancellation patterns.
+
 ---
 
 ## 🛠️ Tools & Technologies
@@ -87,6 +92,8 @@ The Business Analysis layer uses SQL to answer business-oriented questions using
 * **Git**
 * **GitHub**
 * **Power BI** 
+* **Dax Measures** 
+* **Calulated Columns** 
 
 ---
 
@@ -212,6 +219,14 @@ Bookings are grouped into lead-time buckets and analyzed using:
 
 This provides a structured way to examine the relationship between **booking lead time and cancellation behavior**.
 
+**Key Analysis: Power BI Dashboard**
+- Cancellation Rate by Market Segment
+- Cancellation Rate by Deposit Type
+- Cancellation Rate by Distribution Channel
+- Cancellation Rate by Lead Time
+- Cancellation Rate: Repeat vs Non-Repeat Guests
+- Cancellation Rate by Customer Type
+
 ---
 
 ## 📂 Project Structure
@@ -221,50 +236,31 @@ Hotel-Booking-Analytics/
 │
 ├── README.md
 │
-├── data/
+├── csv_file/
 │   └── hotel_data.csv
 │
-├── sql/
-│   ├── bronze/
-│   │   └── bronze_load.sql
+├── medallian_architecture/
+│   ├── Hotel data bronze layer.sql
 │   │
-│   ├── silver/
-│   │   └── silver_load.sql
+│   ├── Hotel data silver layer.sql
 │   │
-│   └── gold/
-│       ├── gold_tables.sql
-│       └── business_analysis.sql
+│   └── Hotel data gold layer.sql
+│
+├── data_quality_checks/
+│   └── Hotel data quality checks.sql
+│
+├── business_questions/
+│   └── Business related queries.sql
 │
 ├── powerbi/
-│   └── hotel_booking_dashboard.pbix
+│   └── Hotel analytics dashboard.pbix
 │
 └── screenshots/
     ├── dashboard_1.png
     └── dashboard_2.png
+    └── gold layer.png
+    └──...
 ```
-
----
-
-## 📊 Project Workflow
-
-```text
-Hotel Booking Dataset
-        ↓
-   Bronze Layer
-        ↓
-   Silver Layer
-        ↓
-     Gold Layer
-        ↓
-Business Analysis
-        ↓
-Revenue | ADR | Cancellations
-        ↓
-Customer | Lead Time | Stay Duration
-        ↓
-Business Insights
-```
-
 ---
 
 ## 🧠 What I Learned
@@ -285,10 +281,10 @@ Through this project, I practiced how to:
 
 ## 👤 About
 
-This project is part of my transition into **Data Analytics**, with a focus on developing practical skills in **SQL, data analysis, business intelligence, and problem solving**.
+This project is part of my transition into **Data Analytics**, with a focus on developing practical skills in **SQL, data analysis, business intelligence, problem solving, and Power BI**.
 
 ---
 
 ## 📌 Skills Demonstrated
 
-**SQL Server | SQL | Data Analysis | CTEs | Window Functions | Data Aggregation | Business Analysis | Revenue Analysis | Customer Analysis | Git & GitHub**
+**SQL Server | SQL | Data Analysis | CTEs | Window Functions | Data Aggregation | Business Analysis | Power BI | DAX | Revenue Analysis | Customer Analysis | Git & GitHub**
